@@ -1,0 +1,75 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
+    font-weight: 300;
+    display: flex;
+    line-height: 1.3;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+button {
+    border: 0;
+    outline: none;
+}
+
+.calculator {
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+    margin: 2rem auto;
+    width: 30rem;
+}
+
+.display {
+    background-color: #222222;
+    color: #fff;
+    text-align: right;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.7rem;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+.keys {
+    text-align: center;
+    background-color: #999;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.keys>* {
+    background-color: #fff;
+    padding: 0.5em 1.25em;
+    position: relative;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.keys>*:active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.operator {
+    background-color: #eee;
+}
+
+.equal {
+    background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+    grid-column: -2;
+    grid-row: 2 / span 4;
+}
